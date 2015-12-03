@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculatorController">
+   <children>
+      <ImageView fitHeight="412.0" fitWidth="801.0">
+         <image>
+            <Image url="@../background/bild.gif" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="400.0" prefWidth="800.0">
+         <top>
+            <VBox alignment="TOP_CENTER" opacity="0.56" prefHeight="90.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="TOP_CENTER" prefHeight="40.0" prefWidth="315.0" rotate="19.7" text="Calculator" textAlignment="CENTER" textFill="#da3333">
+                     <font>
+                        <Font name="Consolas" size="33.0" />
+                     </font>
+                     <effect>
+                        <Bloom threshold="0.0">
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </Bloom>
+                     </effect>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </top>
+         <bottom>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField opacity="0.0" prefHeight="77.0" prefWidth="800.0" />
+                  <Label fx:id="resultLabel" alignment="CENTER" prefHeight="230.0" prefWidth="783.0" text="Results" textAlignment="CENTER" textFill="#cd2323">
+                     <font>
+                        <Font name="Comic Sans MS" size="96.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </bottom>
+         <left>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="numField1" opacity="0.22" prefHeight="111.0" prefWidth="200.0" style="-fx-background-color: RED;">
+                     <font>
+                        <Font size="52.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="numField2" opacity="0.22" prefHeight="114.0" prefWidth="199.0" style="-fx-background-color: RED;">
+                     <font>
+                        <Font size="52.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </right>
+         <center>
+            <GridPane prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="multiply" mnemonicParsing="false" prefHeight="26.0" prefWidth="43.0" rotate="54.0" style="-fx-background-color: orange;" text="*" textFill="#e80d0d">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="divided" mnemonicParsing="false" rotate="-59.0" style="-fx-background-color: orange;" text="/" textFill="#e80d0d" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="93.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="addition" mnemonicParsing="false" rotate="37.9" style="-fx-background-color: orange;" text="+" textFill="#e80d0d" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="subtract" mnemonicParsing="false" rotate="-45.0" style="-fx-background-color: orange;" text="-" textFill="#e80d0d" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="93.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="clear" mnemonicParsing="false" prefHeight="25.0" prefWidth="165.0" style="-fx-background-color: orange;" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
